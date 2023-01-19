@@ -40,22 +40,27 @@
 # months_remaining=years_remaining*12
 # print(f"You have {days_remaining} days, {weeks_remaining} weeks, and {months_remaining} months left.")
 
-number=int(input("Which number do you want to check? "))
-if number % 2 == 0:
-    print("This is an even Number")
+                   # MULTIPLE IF 
+print("Welcome to the Brown's bike ride")
+name=input("Enter your First Name and second Name:")
+bill=0
+height=int(input(f"what's your height {name}: "))
+if height>=120:
+    print("You are eligible to riding the bike")
+    age=int(input(f"What's your age {name}: "))
+    if age<12: 
+         bill=3
+         print("The ticket is 3$")
+    if age<=18:
+         bill=5
+         print("The ticket is 5$")
+    elif age>18:
+        bill=7
+        print("The ticket is 7$")
+    photo=input("Do you want a photo taken? Y or N: ")
+    if photo=="Y":
+        bill+=3
+    print(f"Your final bill is {bill}")
 else:
-    print("This is an odd number")
+    print(f"Ops! {name} you have to grow taller before you can ride. ")
 
-print("Welcome to Brown bike riding")
-height=int(input("What is your height in cm? "))
-if height>120:
-    print("You can ride the bike")
-    age=int(input("Enter your age: "))
-    if age<12:
-        print("Kindly pay 5$")
-    elif age<=18:
-            print("Kindly pay 7$")
-    else:
-                print("Kindly pay 12$")
-else:
-     print("Sorry, you have to grow taller before you can ride.")
